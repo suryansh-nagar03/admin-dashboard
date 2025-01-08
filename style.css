@@ -17,6 +17,8 @@ a{
 
 /* Side-Bar css */
 .side-bar{
+    position: sticky;
+    top: 0;
     box-sizing: border-box;
     padding: 2%;
     color: white;
@@ -25,7 +27,7 @@ a{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    height:40rem;   
+    height: 100vh;  
 }
 .heading img{
     height: 50px;
@@ -57,13 +59,14 @@ a{
 }
 .side-bar a:hover{
     cursor: pointer;
-    color: rgb(155, 22, 66);
-    text-decoration: underline;
+    height:30px;
+    width: 30px;
+    /* padding-left: 3px; */
 }
 
 /* Header css */
 .main-board{
-    width: 82%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -71,7 +74,7 @@ a{
 .header{
     padding: 2%;
     padding-right: 1%;
-    height: 20%;
+    /* height: 20%; */
     background-color: white;
     width: 100%;
 }
@@ -79,20 +82,28 @@ a{
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    height: 20%;
+    /* height: 20%; */
 }
 .search{
     display: flex;  
-    /* box-sizing: border-box; */
     gap: 5px;
     width: 65%;
+}
+#search-img{    
+    height: 25px;
+    width: 20px;
 }
 .search-box{
     border-radius: 12px;
     width: 95%;
     border: 1px solid black;
-    background-color: aliceblue;
+    background-color: rgb(234, 231, 231);
     height: 25px;
+    border: none;
+}
+.search-box:focus{
+    outline: none;
+    border: 1px solid grey;
 }
 #login-name{
     font-weight: 800;
@@ -158,17 +169,22 @@ a{
     width: 75px;
     height: 25px;
 }
-
+.buttons:hover{
+    border: 1px solid rgb(47, 115, 210);
+    background-color: white;
+    color: rgb(47, 115, 210);
+    cursor: pointer;
+}
 /* Content box designing */
 .content-box{
     width: 100%;
-    background-color: lightgrey;
+    background-color: rgb(234, 231, 231);
     display: flex;  
     padding: 2%;
-} 
-.projects{
-    width: 70%;
 }
+/* .projects{
+    width: 700px;
+} */
 .projects-content{
     display: flex;
     flex-wrap: wrap; 
@@ -181,14 +197,16 @@ a{
     padding-bottom: 7px;
 }
 .project-boxes{
-    /* flex: 1 1 calc(33.33% - 20px);  */
-    width: 40%;
+    width: 330px;
     height: 130px;
     border:none;
-    border-left: 5px solid rgb(47, 115, 210);
+    border-left: 7px solid rgb(211, 174, 63);
     border-radius: 5px;
     background-color: white;
     padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .project-up{
     display: flex;
@@ -200,9 +218,76 @@ a{
     font-weight: 800;
 }
 .project-text{
+    font-size: 14px;
+    color: rgb(70, 71, 71);
+}
+.project-down{
+    display: flex;
+    gap: 5px;
+    justify-content: right;
+}
+.project-icons{
+    width: 20px;
+    height: 20px;
+}
+
+/* Update trend section */
+.update-trend{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 270px;
+}
+.update,.trend{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: 100%;
+}
+.trending,.announcements{
+    border-radius: 4px;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    /* width: 270px; */
+    display: flex;
+    flex-direction: column; 
+}
+.announced{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1px solid rgb(180, 186, 186);
+    padding: 5px;
+    padding-bottom: 10px;
+}
+.announced-heading{
+    font-size: 14px;
+    font-weight: 800;
+}
+.announced-text{
     font-size: 12px;
     color: rgb(70, 71, 71);
 }
-.update-trend{
-    width: 200px;
+.trending{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.trend-img{
+    height: 30px;   
+    width: 30px;
+    border-radius: 50%;
+}   
+.trends{
+    display: flex;
+    gap: 10px;
+}
+.trend-heading{
+    font-size: 14px;
+    font-weight:bold;
+}
+.trend-text{
+    font-size: 12px;
+    color: rgb(70, 71, 71);
 }
